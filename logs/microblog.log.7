@@ -1,0 +1,99 @@
+2018-07-28 22:37:08,342 ERROR: Exception on /search [GET] [in C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\nedia\Python\microblog\app\main\routes.py", line 145, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\nedia\Python\microblog\app\models.py", line 89, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\nedia\Python\microblog\app\search.py", line 23, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
+    doc_type, '_search'), params=params, body=body)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 185, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+elasticsearch.exceptions.NotFoundError: TransportError(404, 'index_not_found_exception', 'no such index')
+2018-07-28 22:37:10,883 ERROR: Exception on /search [GET] [in C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\nedia\Python\microblog\app\main\routes.py", line 145, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\nedia\Python\microblog\app\models.py", line 89, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\nedia\Python\microblog\app\search.py", line 23, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
+    doc_type, '_search'), params=params, body=body)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 185, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+elasticsearch.exceptions.NotFoundError: TransportError(404, 'index_not_found_exception', 'no such index')
+2018-07-28 22:37:21,414 ERROR: Exception on /search [GET] [in C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\nedia\Python\microblog\app\main\routes.py", line 145, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\nedia\Python\microblog\app\models.py", line 89, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\nedia\Python\microblog\app\search.py", line 23, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
+    doc_type, '_search'), params=params, body=body)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 185, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "C:\Users\nedia\Anaconda3\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+elasticsearch.exceptions.NotFoundError: TransportError(404, 'index_not_found_exception', 'no such index')
